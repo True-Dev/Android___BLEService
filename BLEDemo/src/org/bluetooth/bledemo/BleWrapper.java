@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.util.Log;
+import android.widget.Toast;
 
 public class BleWrapper {
 	/* defines (in milliseconds) how often RSSI should be updated */
@@ -282,7 +283,7 @@ public class BleWrapper {
         		                                intValue,
         		                                rawValue,
         		                                timestamp);
-    }    
+    }
     
     /* reads and return what what FORMAT is indicated by characteristic's properties
      * seems that value makes no sense in most cases */
@@ -317,7 +318,7 @@ public class BleWrapper {
         
         boolean success = mBluetoothGatt.setCharacteristicNotification(ch, enabled);
         if(!success) {
-        	Log.e("------", "Seting proper notification status for characteristic failed!");
+        	Log.e("------", "Setting proper notification status for characteristic failed!");
         }
         
         // This is also sometimes required (e.g. for heart rate monitors) to enable notifications/indications

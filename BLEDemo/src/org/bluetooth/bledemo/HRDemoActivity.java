@@ -33,7 +33,7 @@ public class HRDemoActivity extends Activity {
 	private BluetoothGatt    mBTGatt = null;
 	private BluetoothGattService        mBTService = null;
 	private BluetoothGattCharacteristic mBTValueCharacteristic = null;
-	// UUDI od Heart Rate service:
+	// UUID of Heart Rate service:
 	final static private UUID mHeartRateServiceUuid = BleDefinedUUIDs.Service.HEART_RATE;
 	final static private UUID mHeartRateCharacteristicUuid = BleDefinedUUIDs.Characteristic.HEART_RATE_MEASUREMENT;
 	
